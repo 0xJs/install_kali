@@ -50,6 +50,8 @@ wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Shar
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
 wget https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe
+https://github.com/carlospolop/PEASS-ng/releases/download/20220214/winPEASx86.exe
+wget https://github.com/carlospolop/PEASS-ng/releases/download/20220214/winPEASx64.exe
 git clone https://github.com/bitsadmin/wesng --depth 1 && cd wesng && python3 wes.py --update && cd ../
 cp /opt/windows/sysinternals/accesschk64.exe .
 cp /opt/windows/sysinternals/accesschk.exe .
