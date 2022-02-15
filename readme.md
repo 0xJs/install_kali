@@ -26,6 +26,7 @@ evil-winrm
 cd /opt
 git clone https://github.com/danielmiessler/SecLists
 git clone https://github.com/CompassSecurity/BloodHoundQueries
+git clone https://github.com/zyn3rgy/LdapRelayScan
 ```
 
 ## Manual tasks
@@ -38,4 +39,7 @@ git clone https://github.com/CompassSecurity/BloodHoundQueries
   - Start BloodHound and login with the username ```neo4j``` and the new password.
 - Install tmux config
   - ```cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf```
+- Change terminal opacity
+  - Open terminal --> File --> Preferences --> Application transperancy to 0%
+- 
 
