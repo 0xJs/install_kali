@@ -60,6 +60,7 @@ git clone https://github.com/diego-treitos/linux-smart-enumeration && cp linux-s
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh && chmod +x linpeas.sh
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 && chmod +x pspy*
+git clone https://github.com/jondonas/linux-exploit-suggester-2
 
 
 # Covenant install rastamouse
