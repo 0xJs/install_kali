@@ -37,5 +37,5 @@ git clone https://github.com/CompassSecurity/BloodHoundQueries
 - Install Bloodhound
   - ```sudo neo4j start``` and go to http://localhost:7474. Fill in default username and password ```neo4j``` and choose a new password.
   - Set custom queries ```cp /opt/BloodHoundQueries/customqueries.json ~/.config/bloodhound/customqueries.json```
-  - Start BloodHound and login with the username ```neo4j```and the new password.
+  - Start BloodHound and login with the username ```neo4j``` and the new password.
 - 
