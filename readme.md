@@ -24,13 +24,14 @@ evil-winrm
 
 ## Installed tools through git
 ```
+sudo chmod 777 /opt/
 cd /opt
 git clone https://github.com/danielmiessler/SecLists
 git clone https://github.com/CompassSecurity/BloodHoundQueries
 
 # Windows dir
 mkdir windows && cd /opt/windows
-wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -o kerbrute && chmod +x kerbrute
+wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O kerbrute && chmod +x kerbrute
 git clone https://github.com/zyn3rgy/LdapRelayScan
 mkdir sysinternals && cd sysinternals && wget https://download.sysinternals.com/files/SysinternalsSuite.zip && unzip SysinternalsSuite.zip && rm -rf SysinternalsSuite.zip && cd ../
 git clone https://github.com/WazeHell/sam-the-admin
