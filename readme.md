@@ -1,8 +1,5 @@
 # Github repo for my installation notes
 
-## First step
-
-
 ## Installed packages through apt
 - Filezilla
 - Bloodhound
@@ -28,7 +25,6 @@ cd /opt
 git clone https://github.com/danielmiessler/SecLists
 git clone https://github.com/CompassSecurity/BloodHoundQueries
 ```
-
 
 ## Manual tasks
 - Run this : https://github.com/Dewalt-arch/pimpmykali
