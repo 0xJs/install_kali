@@ -43,7 +43,7 @@ git clone https://github.com/Hackndo/WebclientServiceScanner && sudo python3 /op
 
 # Privesc section
 cd /opt && mkdir privesc && cd privesc && mkdir windows && mkdir linux
-cd windows && wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat 
+cd /opt/privesc/windows && wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat 
 wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
 wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Seatbelt.exe
 wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/SharpUp.exe
@@ -54,13 +54,13 @@ git clone https://github.com/bitsadmin/wesng --depth 1 && cd wesng && python3 we
 cp /opt/windows/sysinternals/accesschk64.exe .
 cp /opt/windows/sysinternals/accesschk.exe .
 
-cd ../linux
+cd /opt/privesc/linux
 git clone https://github.com/rebootuser/LinEnum && cp LinEnum/LinEnum.sh .  && rm -rf LinEnum
 git clone https://github.com/diego-treitos/linux-smart-enumeration && cp linux-smart-enumeration/lse.sh . && rm -rf linux-smart-enumeration
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh && chmod +x linpeas.sh
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 && chmod +x pspy*
-cd /opt
+
 
 # Covenant install rastamouse
 cd /opt && wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -70,6 +70,11 @@ sudo apt -y install apt-transport-https dotnet-sdk-3.1 dnsutils
 rm packages-microsoft-prod.deb
 git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
 cd /opt/Covenant/Covenant && dotnet build
+
+# Buffer overflow
+cd /opt && mkdir bufferoverflow && cd bufferoverflow
+wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastructure/bufferoverflow/fuzzing.py
+wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastructure/bufferoverflow/exploit.py
 ```
 
 ## Manual tasks
