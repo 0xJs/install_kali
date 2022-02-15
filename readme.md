@@ -7,7 +7,7 @@
 - Xclip
 - sshuttle
 ```
-sudo apt install filezilla bloodhound gobuster xclip
+sudo apt install filezilla bloodhound gobuster xclip sshuttle
 ```
 
 ## Installed tools through pip
