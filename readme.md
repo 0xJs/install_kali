@@ -1,4 +1,7 @@
 # Github repo for my installation notes
+#### Todo
+- Keep adding stuff along the way I install stuff
+- Next time reinstalling running more with git clone and copying tools out so updating tools is easier with ```sudo gitup --add /opt```
 
 ## Installed packages through apt
 - Filezilla
@@ -45,6 +48,7 @@ git clone https://github.com/Hackndo/WebclientServiceScanner && sudo python3 /op
 # Privesc section
 cd /opt && mkdir privesc && cd privesc && mkdir windows && mkdir linux
 cd /opt/privesc/windows && wget https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/winPEASbat/winPEAS.bat 
+cd /opt/privesc/ && git clone https://github.com/carlospolop/PEASS-ng
 wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
 wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Seatbelt.exe
 wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/SharpUp.exe
@@ -64,7 +68,6 @@ wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 && chmod +x pspy*
 git clone https://github.com/jondonas/linux-exploit-suggester-2
-
 
 # Covenant install rastamouse
 cd /opt && wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -92,11 +95,20 @@ wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastru
   - Start BloodHound and login with the username ```neo4j``` and the new password.
 - Install tmux config
   - ```cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf```
+- Configure Burp
+  - Download https://github.com/yeswehack/PwnFox/releases/tag/v1.0.3 and add it to burp
+  - Download the pwnfox browser extension https://github.com/yeswehack/PwnFox
+  - Browsw to ```http://burp``` and install the certificate in Firefox
 
 ## Cleanup
 ```
 # Cleanup
 rm -rf /opt/pimpmykali
 mkdir /opt/kali && mv /opt/BloodHoundQueries /opt/kali
+```
+
+#### Update github repos in /opt
+```
+sudo gitup --add /opt
 ```
 
