@@ -7,7 +7,7 @@
 - Xclip
 - 
 ```
-sudo apt install filezilla Bloodhound gobuster xclip
+sudo apt install filezilla bloodhound gobuster xclip
 ```
 
 ## Installed tools through pip
