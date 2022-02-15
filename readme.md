@@ -9,8 +9,9 @@
 - Gobuster
 - Xclip
 - sshuttle
+- python3-git-repo-updater
 ```
-sudo apt install filezilla bloodhound gobuster xclip sshuttle
+sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-updater
 ```
 
 ## Installed tools through pip
