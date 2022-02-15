@@ -33,6 +33,7 @@ cd /opt
 git clone https://github.com/danielmiessler/SecLists
 git clone https://github.com/CompassSecurity/BloodHoundQueries
 
+
 # Windows dir
 mkdir windows && cd /opt/windows
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O kerbrute && chmod +x kerbrute
@@ -94,6 +95,7 @@ wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastru
 - Install Bloodhound
   - ```sudo neo4j start``` and go to http://localhost:7474. Fill in default username and password ```neo4j``` and choose a new password.
   - Start BloodHound and login with the username ```neo4j``` and the new password.
+  - Copy customqueries ```cp /opt/BloodHoundQueries/customqueries.json ~/.config/bloodhound/customqueries.json```
 - Install tmux config
   - ```cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf```
 - Configure Burp
