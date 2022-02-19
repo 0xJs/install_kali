@@ -102,6 +102,8 @@ wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastru
   - Download https://github.com/yeswehack/PwnFox/releases/tag/v1.0.3 and add it to burp
   - Download the pwnfox browser extension https://github.com/yeswehack/PwnFox
   - Browsw to ```http://burp``` and install the certificate in Firefox
+- Portproxy
+  - Install portproxy firefox addon. 
 
 ## Cleanup
 ```
