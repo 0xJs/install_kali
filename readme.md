@@ -96,12 +96,14 @@ wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastru
   - ```sudo neo4j start``` and go to http://localhost:7474. Fill in default username and password ```neo4j``` and choose a new password.
   - Start BloodHound and login with the username ```neo4j``` and the new password.
   - Copy customqueries ```cp /opt/BloodHoundQueries/customqueries.json ~/.config/bloodhound/customqueries.json```
+  - Install the following queries in this file for certipy paths https://github.com/ly4k/Certipy/blob/main/customqueries.json
+    - ```cd ~/ && wget https://raw.githubusercontent.com/ly4k/Certipy/main/customqueries.json && cat customqueries.json >> ~/.config/bloodhound/customqueries.json```
 - Install tmux config
   - ```cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf```
 - Configure Burp
   - Download https://github.com/yeswehack/PwnFox/releases/tag/v1.0.3 and add it to burp
   - Download the pwnfox browser extension https://github.com/yeswehack/PwnFox
-  - Browsw to ```http://burp``` and install the certificate in Firefox
+  - Browsw to ```http://burp``` and install the certificate in Firefox 
 - Portproxy
   - Install portproxy firefox addon. 
 
