@@ -17,8 +17,9 @@ sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-u
 ## Installed tools through pip
 - Bloodhound.py
 - Virtualenv
+- mssql-cli
 ```
-pip3 install bloodhound virtualenv
+pip3 install bloodhound virtualenv mssql-cli
 ```
 
 ## Installed tools through gem
