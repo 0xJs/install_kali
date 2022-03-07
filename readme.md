@@ -47,6 +47,7 @@ git clone https://github.com/dirkjanm/krbrelayx
 git clone https://github.com/dirkjanm/mitm6
 git clone https://github.com/Greenwolf/ntlm_theft
 git clone https://github.com/Hackndo/WebclientServiceScanner && sudo python3 /opt/WebclientServiceScanner/setup.py install
+git clone https://github.com/nccgroup/Change-Lockscreen
 
 # Privesc section
 cd /opt && mkdir privesc && cd privesc && mkdir windows && mkdir linux
