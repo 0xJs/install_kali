@@ -24,7 +24,7 @@ pip3 install bloodhound virtualenv mssql-cli
 
 ## Installed tools through gem
 ```
-evil-winrm
+gem install evil-winrm
 ```
 
 ## Installed tools through git
