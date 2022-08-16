@@ -48,6 +48,8 @@ git clone https://github.com/dirkjanm/mitm6
 git clone https://github.com/Greenwolf/ntlm_theft
 git clone https://github.com/Hackndo/WebclientServiceScanner && sudo python3 /opt/WebclientServiceScanner/setup.py install
 git clone https://github.com/nccgroup/Change-Lockscreen
+git clone https://github.com/login-securite/DonPAPI; cd DonPAPI; python3 -m pip install -r requirements.txt; cd ../
+
 
 # Privesc section
 cd /opt && mkdir privesc && cd privesc && mkdir windows && mkdir linux
