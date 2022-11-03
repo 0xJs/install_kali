@@ -1,4 +1,7 @@
-# Github repo for my installation notes
+Installation notes from when I install Kali machine for penetration testing. Focussing on On-Prem Active Directory and Infrastructur. I wrote these notes down so it is easier to reinstall my system. Posted it publicly as inspiration for others. If you have any good tool recommendations feel free to DM me on discord 0xjs#9027.
+
+# Install Kali
+
 #### Todo
 - Keep adding stuff along the way I install stuff
 - Next time reinstalling running more with git clone and copying tools out so updating tools is easier with ```sudo gitup --add /opt```
