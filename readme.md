@@ -32,7 +32,7 @@ gem install evil-winrm
 
 ## Installed tools through git
 ```
-sudo chmod 777 /opt/
+sudo chown -r user:user /opt/
 cd /opt
 git clone https://github.com/danielmiessler/SecLists
 git clone https://github.com/CompassSecurity/BloodHoundQueries
