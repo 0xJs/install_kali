@@ -14,7 +14,7 @@ Installation notes from when I install Kali machine for penetration testing. Foc
 - sshuttle
 - python3-git-repo-updater
 ```
-sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-updater
+sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-updater sshpass
 ```
 
 ## Installed tools through pip
