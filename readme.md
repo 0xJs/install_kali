@@ -14,7 +14,7 @@ Installation notes from when I install Kali machine for penetration testing. Foc
 - sshuttle
 - python3-git-repo-updater
 ```
-sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-updater sshpass python3.10-venv
+sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-updater sshpass python3.10-venv jq
 ```
 
 ## Installed tools through pip
@@ -35,8 +35,7 @@ sudo gem install evil-winrm
 sudo chown -R user:user /opt/
 cd /opt
 git clone https://github.com/danielmiessler/SecLists
-git clone https://github.com/CompassSecurity/BloodHoundQueries
-
+curl https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/BloodHound_Custom_Queries_Merger/bloodhound-customqueries-downloader | bash
 
 # Windows dir
 mkdir windows && cd /opt/windows
