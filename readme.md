@@ -96,7 +96,7 @@ wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastru
 - Run this : https://github.com/Dewalt-arch/pimpmykali
 - Change terminal opacity
   - Open terminal --> File --> Preferences --> Application transperancy to 0%
-- Download Burp Pro https://portswigger.net/burp/releases/professional-community-2022-1-1?requestededition=professional
+- Download Burp Pro https://portswigger.net/burp/releases#professional
   - Run the burp .sh script
 - Install Bloodhound
   - ```sudo neo4j start``` and go to http://localhost:7474. Fill in default username and password ```neo4j``` and choose a new password.
