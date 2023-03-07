@@ -90,6 +90,51 @@ cd /opt/Covenant/Covenant && dotnet build
 cd /opt && mkdir bufferoverflow && cd bufferoverflow
 wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastructure/bufferoverflow/fuzzing.py
 wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastructure/bufferoverflow/exploit.py
+
+# Google cloud tools
+cd /opt && mkdir gc && cd /opt/gc
+
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-420.0.0-linux-x86_64.tar.gz
+tar -xvf google-cloud-cli-420.0.0-linux-x86_64.tar.gz
+bash /opt/gc/google-cloud-sdk/install.sh -q --command-completion=true --path-update=true
+rm -rf google-cloud-cli-420.0.0-linux-x86_64.tar.gz
+
+git clone https://github.com/RedTeamOperations/GCPTokenReuse
+
+git clone https://github.com/google/gcp_scanner.git
+cd gcp_scanner && pip3 install -r requirements.txt
+
+git clone https://github.com/carlospolop/bf_my_gcp_permissions
+
+cd /opt/gc/
+git clone https://gitlab.com/gitlab-com/gl-security/threatmanagement/redteam/redteam-public/gcp_enum
+
+cd /opt/
+git clone https://github.com/zricethezav/gitleaks
+cd gitleaks && make build
+
+cd /opt/
+git clone https://github.com/initstring/cloud_enum
+cd cloud_enum && pip3 install -r requirements.txt
+
+cd /opt/gc/
+git clone https://github.com/dxa4481/gcploit
+alias sudo='sudo '
+alias gcploit="docker run -v $(pwd)/db:/db -v $HOME/.config:/root/.config -it --rm dxa4481/gcploit python main.py"
+sudo gcploit
+echo 'alias gcploit="docker run -v $(pwd)/db:/db -v $HOME/.config:/root/.config -it --rm dxa4481/gcploit python main.py"' >> ~/.zshrc
+
+cd /opt/gc
+git clone https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation
+cd GCP-IAM-Privilege-Escalation/PrivEscScanner
+pip3 install -r requirements.txt
+
+cd /opt/
+git clone https://github.com/nccgroup/ScoutSuite
+cd ScoutSuite
+virtualenv -p python3 venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
 ## Manual tasks
