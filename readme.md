@@ -7,14 +7,12 @@ Installation notes from when I install Kali machine for penetration testing. Foc
 - Next time reinstalling running more with git clone and copying tools out so updating tools is easier with ```sudo gitup --add /opt```
 
 ## Installed packages through apt
-- Filezilla
-- Bloodhound
-- Gobuster
 - Xclip
 - sshuttle
 - python3-git-repo-updater
 ```
-sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-updater sshpass python3.10-venv jq
+sudo apt install -y xclip sshuttle python3-git-repo-updater sshpass python3.11-venv jq pipx docker.io
+sudo systemctl enable docker --now
 ```
 
 ## Installed tools through pip
@@ -22,12 +20,8 @@ sudo apt install filezilla bloodhound gobuster xclip sshuttle python3-git-repo-u
 - Virtualenv
 - mssql-cli
 ```
-pip3 install bloodhound virtualenv mssql-cli
-```
-
-## Installed tools through gem
-```
-sudo gem install evil-winrm
+pip3 install bloodhound virtualenv mssql-cli certipy-ad
+pipx install donpapi
 ```
 
 ## Installed tools through git
@@ -35,23 +29,18 @@ sudo gem install evil-winrm
 sudo chown -R user:user /opt/
 cd /opt
 git clone https://github.com/danielmiessler/SecLists
-curl https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/BloodHound_Custom_Queries_Merger/bloodhound-customqueries-downloader | bash
+
 
 # Windows dir
 mkdir windows && cd /opt/windows
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O kerbrute && chmod +x kerbrute
-git clone https://github.com/zyn3rgy/LdapRelayScan
+git clone https://github.com/zyn3rgy/LdapRelayScan && cd LdapRelayScan && virtualenv env && source env/bin/activate && pip3 install -r requirements.txt && deactivate
 mkdir sysinternals && cd sysinternals && wget https://download.sysinternals.com/files/SysinternalsSuite.zip && unzip SysinternalsSuite.zip && rm -rf SysinternalsSuite.zip && cd ../
-git clone https://github.com/WazeHell/sam-the-admin
-git clone https://github.com/bb00/zer0dump
 git clone https://github.com/topotam/PetitPotam
 git clone https://github.com/dirkjanm/krbrelayx
 git clone https://github.com/dirkjanm/mitm6
 git clone https://github.com/Greenwolf/ntlm_theft
-git clone https://github.com/Hackndo/WebclientServiceScanner && sudo python3 /opt/WebclientServiceScanner/setup.py install
 git clone https://github.com/nccgroup/Change-Lockscreen
-git clone https://github.com/login-securite/DonPAPI; cd DonPAPI; python3 -m pip install -r requirements.txt; cd ../
-
 
 # Privesc section
 cd /opt && mkdir privesc && cd privesc && mkdir windows && mkdir linux
@@ -138,10 +127,9 @@ pip3 install -r requirements.txt
 ```
 
 ## Manual tasks
-- Run this : https://github.com/Dewalt-arch/pimpmykali
 - Change terminal opacity
   - Open terminal --> File --> Preferences --> Application transperancy to 0%
-- Download Burp Pro https://portswigger.net/burp/releases#professional
+- Download [Burp Pro](https://portswigger.net/burp/releases#professional)
   - Run the burp .sh script
 - Install Bloodhound
   - ```sudo neo4j start``` and go to http://localhost:7474. Fill in default username and password ```neo4j``` and choose a new password.
@@ -166,4 +154,3 @@ mkdir /opt/kali && mv /opt/BloodHoundQueries /opt/kali
 ```
 sudo gitup --add /opt
 ```
-
