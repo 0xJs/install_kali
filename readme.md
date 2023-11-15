@@ -137,10 +137,6 @@ pip3 install -r requirements.txt
   - In a browser, navigate to `http://localhost:8080/ui/login`. Login with a username of `admin` and the randomly generated password from the logs
 - Install tmux config
   - `cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf`
-- Configure Burp
-  - Download https://github.com/yeswehack/PwnFox/releases/tag/v1.0.3 and add it to burp
-  - Download the pwnfox browser extension https://github.com/yeswehack/PwnFox
-  - Browsw to ```http://burp``` and install the certificate in Firefox 
 - Foxyproxy
   - Install foxyproxy firefox addon. 
 
