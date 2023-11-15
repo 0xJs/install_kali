@@ -21,7 +21,9 @@ sudo systemctl enable docker --now
 - mssql-cli
 ```
 pip3 install bloodhound virtualenv mssql-cli certipy-ad
-pipx install git+https://github.com/login-securite/DonPAPI.git impacket git+https://github.com/Pennyw0rth/NetExec
+pipx install git+https://github.com/login-securite/DonPAPI.git
+pipx install impacket
+pipx install git+https://github.com/Pennyw0rth/NetExec
 ```
 
 ## Installed tools through git
