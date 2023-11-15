@@ -141,8 +141,8 @@ pip3 install -r requirements.txt
   - Download https://github.com/yeswehack/PwnFox/releases/tag/v1.0.3 and add it to burp
   - Download the pwnfox browser extension https://github.com/yeswehack/PwnFox
   - Browsw to ```http://burp``` and install the certificate in Firefox 
-- Portproxy
-  - Install portproxy firefox addon. 
+- Foxyproxy
+  - Install foxyproxy firefox addon. 
 
 ## Cleanup
 ```
