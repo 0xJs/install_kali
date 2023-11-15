@@ -146,9 +146,7 @@ pip3 install -r requirements.txt
 
 ## Cleanup
 ```
-# Cleanup
-rm -rf /opt/pimpmykali
-mkdir /opt/kali && mv /opt/BloodHoundQueries /opt/kali
+
 ```
 
 #### Update github repos in /opt
