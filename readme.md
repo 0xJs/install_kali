@@ -21,7 +21,7 @@ sudo systemctl enable docker --now
 - mssql-cli
 ```
 pip3 install bloodhound virtualenv mssql-cli certipy-ad
-pipx install donpapi
+pipx install donpapi impacket
 ```
 
 ## Installed tools through git
