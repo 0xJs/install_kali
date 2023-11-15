@@ -36,7 +36,8 @@ git clone https://github.com/danielmiessler/SecLists
 # Windows dir
 mkdir windows && cd /opt/windows
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O kerbrute && chmod +x kerbrute
-git clone https://github.com/zyn3rgy/LdapRelayScan && cd LdapRelayScan && virtualenv env && source env/bin/activate && pip3 install -r requirements.txt && deactivate
+git clone https://github.com/zyn3rgy/LdapRelayScan && cd LdapRelayScan && virtualenv env && source env/bin/activate && pip3 install -r requirements.txt
+deactivate && cd /opt/windows
 mkdir sysinternals && cd sysinternals && wget https://download.sysinternals.com/files/SysinternalsSuite.zip && unzip SysinternalsSuite.zip && rm -rf SysinternalsSuite.zip && cd ../
 git clone https://github.com/topotam/PetitPotam
 git clone https://github.com/dirkjanm/krbrelayx
