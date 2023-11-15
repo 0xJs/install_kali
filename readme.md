@@ -132,10 +132,11 @@ pip3 install -r requirements.txt
 - Download [Burp Pro](https://portswigger.net/burp/releases#professional)
   - Run the burp .sh script
 - Install Bloodhound
-  - ```sudo neo4j start``` and go to http://localhost:7474. Fill in default username and password ```neo4j``` and choose a new password.
-  - Start BloodHound and login with the username ```neo4j``` and the new password.
+  - `wget https://raw.githubusercontent.com/SpecterOps/bloodhound/main/examples/docker-compose/docker-compose.yml && dockdocker-compose -f docker-compose.yml up && rm docker-compose.yml`
+  - Locate the randomly generated password in the terminal output of Docker Compose
+  - In a browser, navigate to `http://localhost:8080/ui/login`. Login with a username of `admin` and the randomly generated password from the logs
 - Install tmux config
-  - ```cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf```
+  - `cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf`
 - Configure Burp
   - Download https://github.com/yeswehack/PwnFox/releases/tag/v1.0.3 and add it to burp
   - Download the pwnfox browser extension https://github.com/yeswehack/PwnFox
