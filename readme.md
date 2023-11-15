@@ -130,7 +130,7 @@ pip3 install -r requirements.txt
 - Change terminal opacity
   - Open terminal --> File --> Preferences --> Application transperancy to 0%
 - Download [Burp Pro](https://portswigger.net/burp/releases#professional)
-  - Run the burp .sh script
+  - Run the `burp.sh` script
 - Install Bloodhound
   - `wget https://raw.githubusercontent.com/SpecterOps/bloodhound/main/examples/docker-compose/docker-compose.yml && dockdocker-compose -f docker-compose.yml up && rm docker-compose.yml`
   - Locate the randomly generated password in the terminal output of Docker Compose
