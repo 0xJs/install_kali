@@ -11,7 +11,7 @@ Installation notes from when I install Kali machine for penetration testing. Foc
 - sshuttle
 - python3-git-repo-updater
 ```
-sudo apt install -y xclip sshuttle python3-git-repo-updater sshpass python3.11-venv jq pipx docker.io
+sudo apt install -y xclip sshuttle python3-git-repo-updater sshpass python3.11-venv jq pipx docker.io docker-compose docker-clean docker-registry
 sudo systemctl enable docker --now
 ```
 
