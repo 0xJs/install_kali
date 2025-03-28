@@ -7,22 +7,22 @@ Installation notes from when I install Kali machine for penetration testing. Foc
 - Next time reinstalling running more with git clone and copying tools out so updating tools is easier with ```sudo gitup --add /opt```
 
 ## Installed packages through apt
-- Xclip
-- sshuttle
-- python3-git-repo-updater
 ```
-sudo apt install -y xclip sshuttle python3-git-repo-updater sshpass python3.11-venv jq pipx docker.io docker-compose docker-clean docker-registry gedit
+sudo apt install -y xclip sshuttle pipx docker.io docker-compose docker-clean docker-registry gedit golang
 sudo systemctl enable docker --now
 ```
 
-## Installed tools through pip
-- Bloodhound.py
-- Virtualenv
-- mssql-cli
+## Set go path
 ```
-pip3 install bloodhound virtualenv mssql-cli certipy-ad
+echo "export GOROOT=/usr/lib/go" > ~/.zshrc
+echo "export GOPATH=$HOME/go" > ~/.zshrc
+echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" > ~/.zshrc
+```
+
+## Installed tools through pip
+```
+pipx install git+https://github.com/zimedev/certipy-merged.git@main
 pipx install git+https://github.com/login-securite/DonPAPI.git
-pipx install impacket
 pipx install git+https://github.com/Pennyw0rth/NetExec
 ```
 
@@ -30,8 +30,6 @@ pipx install git+https://github.com/Pennyw0rth/NetExec
 ```
 sudo chown -R user:user /opt/
 cd /opt
-git clone https://github.com/danielmiessler/SecLists
-
 
 # Windows dir
 mkdir windows && cd /opt/windows
@@ -68,21 +66,34 @@ wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 && chmod +x pspy*
 git clone https://github.com/jondonas/linux-exploit-suggester-2
+```
 
-# Covenant install rastamouse
-cd /opt && wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo apt -y update
-sudo apt -y install apt-transport-https dotnet-sdk-3.1 dnsutils
-rm packages-microsoft-prod.deb
-git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
-cd /opt/Covenant/Covenant && dotnet build
+## Manual tasks
+- Change terminal opacity
+  - Open terminal --> File --> Preferences --> Application transperancy to 0%
+- Download [Burp Pro](https://portswigger.net/burp/releases#professional)
+  - Run the `burp.sh` script
+- Install Bloodhound
+  - `wget https://raw.githubusercontent.com/SpecterOps/bloodhound/main/examples/docker-compose/docker-compose.yml && dockdocker-compose -f docker-compose.yml up && rm docker-compose.yml`
+  - Locate the randomly generated password in the terminal output of Docker Compose
+  - In a browser, navigate to `http://localhost:8080/ui/login`. Login with a username of `admin` and the randomly generated password from the logs
+- Install tmux config
+  - `cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf`
+- Foxyproxy
+  - Install foxyproxy firefox addon. 
 
-# Buffer overflow
-cd /opt && mkdir bufferoverflow && cd bufferoverflow
-wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastructure/bufferoverflow/fuzzing.py
-wget https://raw.githubusercontent.com/0xJs/Pentesting_cheatsheet/main/infrastructure/bufferoverflow/exploit.py
+## Cleanup
+```
 
+```
+
+#### Update github repos in /opt
+```
+sudo gitup --add /opt
+```
+
+#### Old
+```
 # Google cloud tools
 cd /opt && mkdir gc && cd /opt/gc
 
@@ -127,28 +138,4 @@ cd ScoutSuite
 virtualenv -p python3 venv
 source venv/bin/activate
 pip3 install -r requirements.txt
-```
-
-## Manual tasks
-- Change terminal opacity
-  - Open terminal --> File --> Preferences --> Application transperancy to 0%
-- Download [Burp Pro](https://portswigger.net/burp/releases#professional)
-  - Run the `burp.sh` script
-- Install Bloodhound
-  - `wget https://raw.githubusercontent.com/SpecterOps/bloodhound/main/examples/docker-compose/docker-compose.yml && dockdocker-compose -f docker-compose.yml up && rm docker-compose.yml`
-  - Locate the randomly generated password in the terminal output of Docker Compose
-  - In a browser, navigate to `http://localhost:8080/ui/login`. Login with a username of `admin` and the randomly generated password from the logs
-- Install tmux config
-  - `cd ~/ & wget https://raw.githubusercontent.com/0xJs/tmux.conf/master/.tmux.conf`
-- Foxyproxy
-  - Install foxyproxy firefox addon. 
-
-## Cleanup
-```
-
-```
-
-#### Update github repos in /opt
-```
-sudo gitup --add /opt
 ```
