@@ -23,7 +23,6 @@ echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" > ~/.zshrc
 ```
 pipx install git+https://github.com/zimedev/certipy-merged.git@main
 pipx install git+https://github.com/login-securite/DonPAPI.git
-pipx install git+https://github.com/Pennyw0rth/NetExec
 ```
 
 ## Installed tools through git
