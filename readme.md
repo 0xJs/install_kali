@@ -14,9 +14,9 @@ sudo systemctl enable docker --now
 
 ## Set go path
 ```
-echo "export GOROOT=/usr/lib/go" > ~/.zshrc
-echo "export GOPATH=$HOME/go" > ~/.zshrc
-echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" > ~/.zshrc
+echo "export GOROOT=/usr/lib/go" >> ~/.zshrc
+echo "export GOPATH=$HOME/go" >> ~/.zshrc
+echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> ~/.zshrc
 ```
 
 ## Installed tools through pip
