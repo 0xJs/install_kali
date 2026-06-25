@@ -8,7 +8,7 @@ Installation notes from when I install Kali machine for penetration testing. Foc
 
 ## Installed packages through apt
 ```
-sudo apt install -y xclip sshuttle pipx docker.io docker-compose docker-clean docker-registry gedit golang wireguard stunnel resolvconf seclists feroxbuster
+sudo apt install -y xclip sshuttle pipx docker.io docker-compose docker-clean docker-registry gedit golang wireguard stunnel resolvconf seclists feroxbuster jq
 sudo systemctl enable docker --now
 ```
 
